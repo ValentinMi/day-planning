@@ -1,0 +1,126 @@
+/* General styles */
+body {
+    font-family: sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-collapse: collapse;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    /* Table styles */
+    table {
+        font-size: 12px;
+    }
+
+    /* Menu icon styles */
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        text-align: right;
+        margin-top: 10px;
+        margin-right: 10px;
+        color: #333;
+    }
+
+    /* Menu icon hover styles */
+    .menu-icon:hover {
+        cursor: pointer;
+    }
+
+    /* Hidden menu styles */
+    .hidden-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+
+    /* Visible menu styles */
+    .visible-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Menu title styles */
+    .menu-title {
+        display: block;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    /* Menu list styles */
+    .menu-list {
+        display: block;
+        padding: 0;
+        margin: 10px;
+    }
+
+    /* Menu list item styles */
+    .menu-list li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Visible menu styles */
+    .visible-menu.active {
+        transform: translateX(0%);
+    }
+}
+
+.reset-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset-btn {
+    display: block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
