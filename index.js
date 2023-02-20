@@ -19,16 +19,6 @@ checkboxes.forEach(checkbox => {
         // Save the checked state to localstorage
         savedActivities[rowIndex] = event.target.checked;
         localStorage.setItem(localStorageKey, JSON.stringify(savedActivities));
-
-        // Check if all checkboxes are checked and reset them if they are
-        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
-        if (allChecked) {
-            checkboxes.forEach(checkbox => {
-                checkbox.checked = false;
-                savedActivities[checkbox.parentNode.parentNode.rowIndex] = false;
-                localStorage.setItem(localStorageKey, JSON.stringify(savedActivities));
-            });
-        }
     });
 });
 
